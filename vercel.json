@@ -1,0 +1,87 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    },
+    {
+      "src": "api/create_playlist.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/handle_login.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/mongodb_helper.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/delete_playlist.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/get_GPT_tracks.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/get_posters.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/get_GPT_artists.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/Musaic.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/handleGenres.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/delete_userdata.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/create_playlist",
+      "destination": "/api/create_playlist.py"
+    },
+    {
+      "source": "/api/handle_login",
+      "destination": "/api/handle_login.py"
+    },
+    {
+      "source": "/api/delete_playlist",
+      "destination": "/api/delete_playlist.py"
+    },
+    {
+      "source": "/api/get_GPT_tracks",
+      "destination": "/api/get_GPT_tracks.py"
+    },
+    {
+      "source": "/api/get_posters",
+      "destination": "/api/get_posters.py"
+    },
+    {
+      "source": "/api/get_GPT_artists",
+      "destination": "/api/get_GPT_artists.py"
+    },
+    {
+      "source": "/api/Musaic",
+      "destination": "/api/Musaic.py"
+    }, 
+    {
+      "source": "/api/handleGenres",
+      "destination": "/api/handleGenres.py"
+    }, 
+    {
+      "source": "/api/delete_userdata",
+      "destination": "/api/delete_userdata.py"
+    }
+  ]
+}
